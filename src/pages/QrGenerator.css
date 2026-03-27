@@ -1,0 +1,184 @@
+/* QR Code Generator */
+.qr-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.qr-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: 0.35rem;
+}
+
+.qr-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Two-column layout */
+.qr-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Controls */
+.qr-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qr-input {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  resize: vertical;
+  min-height: 80px;
+}
+
+.qr-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.qr-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.qr-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.qr-option label {
+  font-weight: 500;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.qr-option input[type='number'] {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-tag);
+  color: var(--text);
+  width: 80px;
+  text-align: center;
+}
+
+.qr-option input[type='number']:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.qr-option input[type='color'] {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.qr-unit {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.qr-color-value {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Downloads */
+.qr-downloads {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.qr-download {
+  padding: 0.6rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.qr-download:hover {
+  opacity: 0.85;
+}
+
+.qr-download--alt {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.qr-download--alt:hover {
+  background: var(--accent-dim);
+  opacity: 1;
+}
+
+/* Preview */
+.qr-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.qr-preview canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.qr-placeholder {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .qr-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .qr-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-preview {
+    min-height: 150px;
+  }
+}

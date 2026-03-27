@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import BgRemover from './pages/BgRemover'
+import ImagesToPdf from './pages/ImagesToPdf'
+import ColorPicker from './pages/ColorPicker'
+import StarForce from './pages/StarForce'
+import UnitConverter from './pages/UnitConverter'
+import QrGenerator from './pages/QrGenerator'
+import TimeZones from './pages/TimeZones'
+import ImageEditor from './pages/ImageEditor'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/tools/bg-remover" element={<BgRemover />} />
+        <Route path="/tools/images-to-pdf" element={<ImagesToPdf />} />
+        <Route path="/tools/color-picker" element={<ColorPicker />} />
+        <Route path="/tools/star-force" element={<StarForce />} />
+        <Route path="/tools/unit-converter" element={<UnitConverter />} />
+        <Route path="/tools/qr-generator" element={<QrGenerator />} />
+        <Route path="/tools/world-clock" element={<TimeZones />} />
+        <Route path="/tools/image-editor" element={<ImageEditor />} />
+      </Routes>
+    </HashRouter>
   )
 }
 

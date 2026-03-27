@@ -1,0 +1,276 @@
+/* White BG Editor page */
+.bgr-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.bgr-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: 0.75rem;
+}
+
+/* Tabs */
+.bgr-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.bgr-tab {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.bgr-tab:hover {
+  color: var(--text);
+}
+
+.bgr-tab--active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+/* Instructions */
+.bgr-instructions {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+.bgr-instructions p {
+  margin-bottom: 0.5rem;
+}
+
+.bgr-instructions ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.bgr-instructions ol li {
+  padding-left: 0.25rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.87rem;
+}
+
+.bgr-instructions ol li::before {
+  display: none;
+}
+
+.bgr-tip {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--accent-dim);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  color: var(--text);
+}
+
+/* Drop zone */
+.bgr-dropzone {
+  position: relative;
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.bgr-dropzone:hover {
+  border-color: var(--accent);
+}
+
+.bgr-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bgr-dropzone-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Controls */
+.bgr-controls {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.bgr-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bgr-slider-row label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.bgr-slider-row input[type='range'] {
+  flex: 1;
+  accent-color: var(--accent);
+  height: 6px;
+}
+
+.bgr-tol-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  min-width: 2ch;
+  text-align: right;
+}
+
+.bgr-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.bgr-download {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.bgr-download:hover {
+  opacity: 0.85;
+}
+
+/* Preview */
+.bgr-preview {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.bgr-preview--visible {
+  display: block;
+}
+
+.bgr-canvas-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.bgr-canvas-wrapper canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background-image:
+    linear-gradient(45deg, #222 25%, transparent 25%),
+    linear-gradient(-45deg, #222 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #222 75%),
+    linear-gradient(-45deg, transparent 75%, #222 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+/* Exclusion rectangle */
+.bgr-exclude-rect {
+  position: absolute;
+  border: 2px dashed var(--accent);
+  border-radius: 4px;
+  pointer-events: none;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.25);
+}
+
+.bgr-exclude-label {
+  position: absolute;
+  top: -1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  background: var(--bg);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+/* Corner handles */
+.bgr-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 2px;
+  pointer-events: auto;
+}
+
+.bgr-handle--nw {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+
+.bgr-handle--ne {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+
+.bgr-handle--sw {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+
+.bgr-handle--se {
+  bottom: -5px;
+  right: -5px;
+  cursor: se-resize;
+}
+
+.bgr-dims {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bgr-page {
+    padding: 1.5rem 1rem;
+  }
+}

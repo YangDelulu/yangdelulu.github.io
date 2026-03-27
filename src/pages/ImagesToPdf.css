@@ -1,0 +1,210 @@
+/* Images to PDF page */
+.i2p-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.i2p-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: 0.35rem;
+}
+
+.i2p-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Drop zone */
+.i2p-dropzone {
+  position: relative;
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.i2p-dropzone:hover {
+  border-color: var(--accent);
+}
+
+.i2p-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.i2p-dropzone-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Image list */
+.i2p-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.i2p-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: grab;
+  transition: border-color 0.15s;
+}
+
+.i2p-item:active {
+  cursor: grabbing;
+}
+
+.i2p-item:hover {
+  border-color: var(--accent);
+}
+
+.i2p-item-handle {
+  color: var(--text-muted);
+  opacity: 0.4;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.i2p-item-thumb {
+  width: 48px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: var(--bg-tag);
+  transition: transform 0.2s;
+}
+
+.i2p-item-name {
+  font-size: 0.85rem;
+  color: var(--text);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.i2p-item-rotate {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.i2p-item-rotate:hover {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.i2p-item-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.i2p-item-remove:hover {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+/* Controls */
+.i2p-controls {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.i2p-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.i2p-option label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.i2p-option select {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-tag);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.i2p-generate {
+  margin-left: auto;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.i2p-generate:hover {
+  opacity: 0.85;
+}
+
+.i2p-generate:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .i2p-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .i2p-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .i2p-generate {
+    margin-left: 0;
+  }
+}

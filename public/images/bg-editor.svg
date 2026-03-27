@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- White half -->
+  <rect x="0" y="0" width="400" height="450" fill="#ffffff"/>
+
+  <!-- Checkerboard half (transparency pattern) -->
+  <defs>
+    <pattern id="checker" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#cccccc"/>
+      <rect x="20" width="20" height="20" fill="#ffffff"/>
+      <rect y="20" width="20" height="20" fill="#ffffff"/>
+      <rect x="20" y="20" width="20" height="20" fill="#cccccc"/>
+    </pattern>
+  </defs>
+  <rect x="400" y="0" width="400" height="450" fill="url(#checker)"/>
+
+  <!-- Arrow -->
+  <polygon points="460,225 400,160 400,192 340,192 340,258 400,258 400,290" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
+</svg>

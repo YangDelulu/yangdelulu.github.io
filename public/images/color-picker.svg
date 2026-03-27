@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#1a1a1a"/>
+
+  <!-- Eyedropper icon centered -->
+  <g transform="translate(400,225) rotate(-45)" stroke="#e4e4e7" stroke-width="4" fill="none">
+    <!-- Dropper body -->
+    <rect x="-16" y="-90" width="32" height="75" rx="4" fill="#2a2a2a"/>
+    <!-- Tip -->
+    <path d="M-16,-15 L-10,-15 L0,12 L10,-15 L16,-15" fill="#2a2a2a" stroke-linejoin="round"/>
+    <!-- Bulb -->
+    <ellipse cx="0" cy="-108" rx="18" ry="24" fill="#818cf8" opacity="0.8"/>
+    <!-- Drop at tip -->
+    <circle cx="0" cy="22" r="6" fill="#818cf8" stroke="none"/>
+  </g>
+</svg>

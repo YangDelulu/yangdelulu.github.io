@@ -1,0 +1,232 @@
+/* Time Zones page */
+.tz-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.tz-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: 0.35rem;
+}
+
+.tz-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Controls */
+.tz-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tz-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tz-control label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tz-control select {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  min-width: 240px;
+}
+
+.tz-time-input {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tz-time-input input {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  width: 55px;
+  text-align: center;
+}
+
+.tz-date-input {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  min-width: 180px;
+  color-scheme: dark;
+}
+
+.tz-time-input input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.tz-time-input span {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.tz-now-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.tz-now-btn:hover {
+  background: var(--accent-dim);
+}
+
+/* Map */
+.tz-map-container {
+  background: #1a2332;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.tz-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tz-city-name {
+  font-size: 2.2px;
+  fill: #a1a1aa;
+  font-family: var(--font);
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tz-city-time {
+  font-size: 2.4px;
+  fill: #facc15;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tz-city-time--night {
+  fill: #818cf8;
+}
+
+/* City list */
+.tz-city-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tz-city-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  background: var(--bg-card);
+  font-size: 0.85rem;
+}
+
+.tz-city-row:hover {
+  background: var(--bg-tag);
+}
+
+.tz-city-row--home {
+  border-left: 3px solid var(--accent);
+}
+
+.tz-city-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tz-city-row-name {
+  color: #f4f4f5;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.tz-city-row-offset {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  min-width: 80px;
+}
+
+.tz-city-row-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.tz-city-row-time {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #facc15;
+  margin-left: auto;
+}
+
+.tz-city-row--night .tz-city-row-time {
+  color: #818cf8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tz-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .tz-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tz-control select {
+    min-width: auto;
+  }
+
+  .tz-city-row-name {
+    min-width: 90px;
+  }
+}
