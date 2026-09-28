@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <radialGradient id="space"><stop stop-color="#243743"/><stop offset="1" stop-color="#10191f"/></radialGradient>
+    <radialGradient id="sphere" cx=".32" cy=".22" r=".85"><stop stop-color="#f2f1e6"/><stop offset=".65" stop-color="#bec9c9"/><stop offset="1" stop-color="#4e666e"/></radialGradient>
+    <linearGradient id="haze" x2="0" y2="1"><stop stop-color="#9fc0c5" stop-opacity="0"/><stop offset="1" stop-color="#9fc0c5" stop-opacity=".14"/></linearGradient>
+  </defs>
+  <path fill="url(#space)" d="M0 0h1200v720H0z"/>
+  <g stroke="#87b3bc" stroke-opacity=".13">
+    <circle cx="600" cy="310" r="195"/><circle cx="600" cy="310" r="245"/><circle cx="600" cy="310" r="335"/>
+    <path d="M0 310h1200M600 0v720M363 73l474 474M363 547 837 73"/>
+    <ellipse cx="600" cy="310" rx="485" ry="130" transform="rotate(-24 600 310)"/>
+  </g>
+  <g fill="#d4dfdc" opacity=".65"><circle cx="194" cy="123" r="1.4"/><circle cx="930" cy="202" r="2"/><circle cx="303" cy="351" r="1"/><circle cx="1080" cy="91" r="1.4"/><circle cx="712" cy="96" r="1"/><circle cx="834" cy="458" r="1.2"/><circle cx="163" cy="450" r="1.5"/><circle cx="417" cy="108" r="1"/></g>
+  <circle cx="600" cy="305" r="131" fill="url(#sphere)"/>
+  <path d="m544 387 28 12 8 21m73-53-17 32-29 10m80-100-10 30" stroke="#819898" stroke-width="2" opacity=".6"/>
+  <path fill="url(#haze)" d="M0 410h1200v310H0z"/>
+  <g fill="#0b1319"><path d="M0 634h53v-13h30v28h51v-37h21v-31h7v31h31v42h29v-12h52v-21h15v-61h6v61h32v19h56v-40h12v-16h8v16h26v45h37v-30h22v-64h6v64h35v28h37v-15h29v-48h10v-21h7v21h22v48h35v-34h19v-67h7v67h26v30h42v-15h39v-47h16v-19h6v19h17v48h37v-16h39v-65h8v-26h5v26h14v66h59v-34h25v-20h9v20h22v40h59v-53h18v-22h6v22h28v55h53v-21h27v-14h20v14h55v-27h32v-15h18v15h42v100H0z"/></g>
+  <path d="M80 672h1040" stroke="#9cb9bd" stroke-opacity=".2"/>
+  <g stroke="#c5a16b" stroke-opacity=".6"><path d="M70 70h28M84 56v28M1102 70h28M1116 56v28"/><circle cx="600" cy="310" r="245" stroke-dasharray="1 22"/></g>
+</svg>
