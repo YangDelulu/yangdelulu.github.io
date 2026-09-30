@@ -1,1 +1,0 @@
-import{n as e,t,u as n}from"./index-BmBVFOkN.js";var r=n(t());function i({section:t}){return(0,r.jsxs)(`nav`,{className:`site-navigation`,"aria-label":`Page navigation`,children:[(0,r.jsx)(e,{to:`/`,className:`back-link`,children:`← Home`}),(0,r.jsxs)(`span`,{children:[`Yang Lu `,(0,r.jsx)(`span`,{"aria-hidden":`true`,children:`/`}),` `,t]})]})}export{i as t};
